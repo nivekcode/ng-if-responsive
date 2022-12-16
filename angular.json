@@ -25,11 +25,9 @@
           "defaultConfiguration": "production"
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "@angular-builders/jest:run",
           "options": {
-            "main": "projects/ng-if-responsive/src/test.ts",
-            "tsConfig": "projects/ng-if-responsive/tsconfig.spec.json",
-            "karmaConfig": "projects/ng-if-responsive/karma.conf.js"
+            "tsConfig": "projects/ng-if-responsive/tsconfig.spec.json"
           }
         }
       }
@@ -115,13 +113,9 @@
           }
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "@angular-builders/jest:run",
           "options": {
-            "main": "projects/ng-if-responsive-showcase/src/test.ts",
-            "polyfills": "projects/ng-if-responsive-showcase/src/polyfills.ts",
             "tsConfig": "projects/ng-if-responsive-showcase/tsconfig.spec.json",
-            "karmaConfig": "projects/ng-if-responsive-showcase/karma.conf.js",
-            "inlineStyleLanguage": "scss",
             "assets": [
               "projects/ng-if-responsive-showcase/src/favicon.ico",
               "projects/ng-if-responsive-showcase/src/assets"

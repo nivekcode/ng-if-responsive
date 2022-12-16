@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class ConfigService {
+
   public getBreakPointFromConfig(
     config: { [key: string]: number } | null,
     breakPointName: string | number
