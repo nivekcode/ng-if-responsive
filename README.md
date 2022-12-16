@@ -1,27 +1,85 @@
-# NgIfResponsive
+# ngIfResponsive
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.4.
+> A simple project that provides helpers to render or remove elements from the DOM based on screen size. Its like `ngIf`, just responsive.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- [NgIfResponsive - WOIP](#ngifresponsive---woip)
+  - [Installation](#installation)
+  - [Usage](#usage)
+    - [Import](#import)
+    - [Usage in HTML](#usage-in-html)
+      - [Pixel breakpoint](#pixel-breakpoint)
+      - [Configuration usage](#configuration-usage)
 
-## Build
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Installation
 
-## Running unit tests
+To install this project run the following command in a terminal of your choice. 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+npm install ngIfResponsive
+```
+## Usage
 
-## Running end-to-end tests
+The project currently provides two directives. A `ngIfResponsiveRender` and a `ngIfResponsiveRemove` directive. As the name indicates the remove directive is used to remove some elements on certain screen sizes and the render directive is used to render elements on certain screen sizes.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Import
 
-## Further help
+Both directives are exported as standalone components and can therefore be added to the `imports` array in your module or standalone component.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+```typescript
+imports: [NgIfResponsiveRemoveDirective,NgIfResponsiveRenderDirective]
+```
+
+
+
+### Usage in HTML
+
+Both directives can be applied as attribute directives on any given DOM element. Each directive accepts the breakpoint as input. When using the directive there are two options, you can either pass in the width of the screen size in Pixel as a number or you can use a custom key as breakpoint identifier (this has to be configured, via Injection token, see below)
+
+
+
+#### Pixel breakpoint
+
+To use a picel as breakpoint you can use the directive in the following way:
+
+```html
+<h3 *ngIfResponsiveRemove="640">Hide on screens bigger than sm</h3>
+```
+
+
+
+#### Configuration usage
+
+If you want to use customized breakpoint identifiers you can define them via the ```RESPONSIVE_NG_IF_CONFIG`` injection token. A example configuration inside your `AppModule` or `AppComponent` could look like this.
+
+```typescript
+providers: [
+    {
+      provide: RESPONSIVE_NG_IF_CONFIG,
+      useValue: {
+        sm: 640,
+        md: 769,
+        lg: 1024,
+        xl: 1080
+      }
+    }
+],
+```
+
+
+
+Based on the configuration you can then go ahead and pass one of the keys (`sm`, `md`, `lg`, `xl`) to the directive.
+
+```html
+<h3 *ngIfResponsiveRemove="'sm'">Hide on screens bigger than sm</h3>
+```
+

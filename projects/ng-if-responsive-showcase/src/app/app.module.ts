@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {NgIf} from "@angular/common";
 
-import {NgIfResponsiveHideDirective} from "../../../ng-if-responsive/src/lib/ng-if-responsive-hide.directive";
-import {NgIfResponsiveShowDirective} from "../../../ng-if-responsive/src/lib/ng-if-responsive-show.directive";
+import {NgIfResponsiveRemoveDirective} from "../../../ng-if-responsive/src/lib/ng-if-responsive-remove.directive";
+import {NgIfResponsiveRenderDirective} from "../../../ng-if-responsive/src/lib/ng-if-responsive-render.directive";
 import {RESPONSIVE_NG_IF_CONFIG} from "../../../ng-if-responsive/src/lib/responsive-config.model";
 
 import {AppComponent} from './app.component';
@@ -15,8 +15,8 @@ import {AppComponent} from './app.component';
   imports: [
     BrowserModule,
     NgIf,
-    NgIfResponsiveHideDirective,
-    NgIfResponsiveShowDirective
+    NgIfResponsiveRemoveDirective,
+    NgIfResponsiveRenderDirective
   ],
   providers: [
     {

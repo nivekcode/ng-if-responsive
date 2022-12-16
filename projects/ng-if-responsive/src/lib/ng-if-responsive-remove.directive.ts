@@ -6,14 +6,14 @@ import {RESPONSIVE_NG_IF_CONFIG} from "./responsive-config.model";
 import {ConfigService} from "./config.service";
 
 @Directive({
-  selector: '[ngIfResponsiveShow]',
+  selector: '[ngIfResponsiveRemove]',
   standalone: true
 })
-export class NgIfResponsiveShowDirective implements OnInit, OnDestroy {
-  @Input() ngIfResponsiveShow!: string | number;
+export class NgIfResponsiveRemoveDirective implements OnInit, OnDestroy {
+  @Input() ngIfResponsiveRemove!: string | number;
 
-  private config = inject(RESPONSIVE_NG_IF_CONFIG, {optional: true});
   private destroy$ = new Subject<void>();
+  private config = inject(RESPONSIVE_NG_IF_CONFIG, {optional: true});
 
   constructor(private responsiveService: ResponsiveService,
               private configService: ConfigService,
@@ -22,7 +22,7 @@ export class NgIfResponsiveShowDirective implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    const breakPoint = this.configService.getBreakPointFromConfig(this.config, this.ngIfResponsiveShow);
+    const breakPoint = this.configService.getBreakPointFromConfig(this.config, this.ngIfResponsiveRemove);
     if(!breakPoint){
       return;
     }
@@ -32,9 +32,9 @@ export class NgIfResponsiveShowDirective implements OnInit, OnDestroy {
     )
       .subscribe(isBigger => {
         if (isBigger) {
-          this.view.createEmbeddedView(this.template);
-        } else {
           this.view.clear()
+        } else {
+          this.view.createEmbeddedView(this.template);
         }
       });
   }
