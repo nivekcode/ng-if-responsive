@@ -6,7 +6,7 @@ import {NgIfResponsiveHideDirective} from "../../../ng-if-responsive/src/lib/ng-
 import {NgIfResponsiveShowDirective} from "../../../ng-if-responsive/src/lib/ng-if-responsive-show.directive";
 import {RESPONSIVE_NG_IF_CONFIG} from "../../../ng-if-responsive/src/lib/responsive-config.model";
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
 
 @NgModule({
   declarations: [
