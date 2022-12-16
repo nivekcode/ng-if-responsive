@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {ChangeDetectorRef, Component} from '@angular/core';
+import {ResponsiveService} from "../../../ng-if-responsive/src/lib/responsive.service";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ngIfResponsiveShowcase';
+
+  constructor(public responsiveService: ResponsiveService, private cdr: ChangeDetectorRef) {
+  }
 }

@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { NgIfResponsiveComponent } from './ng-if-responsive.component';
 
-
-
 @NgModule({
   declarations: [
     NgIfResponsiveComponent
