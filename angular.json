@@ -3,5 +3,39 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "ngIfResponsive": {
+      "projectType": "library",
+      "root": "projects/ng-if-responsive",
+      "sourceRoot": "projects/ng-if-responsive/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ng-if-responsive/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-if-responsive/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ng-if-responsive/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-if-responsive/src/test.ts",
+            "tsConfig": "projects/ng-if-responsive/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-if-responsive/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": false
   }
 }
