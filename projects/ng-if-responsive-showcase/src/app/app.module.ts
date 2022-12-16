@@ -1,24 +1,22 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {NgIf} from "@angular/common";
+import { NgIf } from '@angular/common';
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 
-import {NgIfResponsiveRemoveDirective} from "../../../ng-if-responsive/src/lib/ng-if-responsive-remove.directive";
-import {NgIfResponsiveRenderDirective} from "../../../ng-if-responsive/src/lib/ng-if-responsive-render.directive";
-import {RESPONSIVE_NG_IF_CONFIG} from "../../../ng-if-responsive/src/lib/responsive-config.model";
+import { NgIfResponsiveRemoveDirective } from '../../../ng-if-responsive/src/lib/ng-if-responsive-remove.directive';
+import { NgIfResponsiveRenderDirective } from '../../../ng-if-responsive/src/lib/ng-if-responsive-render.directive';
+import { RESPONSIVE_NG_IF_CONFIG } from '../../../ng-if-responsive/src/lib/responsive-config.model';
 
-import {AppComponent} from './app.component';
+import { AppComponent } from './app.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     HighlightModule,
     NgIf,
     NgIfResponsiveRemoveDirective,
-    NgIfResponsiveRenderDirective
+    NgIfResponsiveRenderDirective,
   ],
   providers: [
     {
@@ -27,16 +25,16 @@ import {AppComponent} from './app.component';
         sm: 640,
         md: 769,
         lg: 1024,
-        xl: 1080
-      }
+        xl: 1080,
+      },
     },
     {
       provide: HIGHLIGHT_OPTIONS,
       useValue: {
         fullLibraryLoader: () => import('highlight.js'),
-      }
-    }
+      },
+    },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
