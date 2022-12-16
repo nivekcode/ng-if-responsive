@@ -1,6 +1,6 @@
 # ngIfResponsive
 
-> A simple project that provides helpers to render or remove elements from the DOM based on screen size. Its like `ngIf`, just responsive.
+> c
 
 
 

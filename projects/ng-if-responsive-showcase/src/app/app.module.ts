@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {NgIf} from "@angular/common";
+import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 
 import {NgIfResponsiveRemoveDirective} from "../../../ng-if-responsive/src/lib/ng-if-responsive-remove.directive";
 import {NgIfResponsiveRenderDirective} from "../../../ng-if-responsive/src/lib/ng-if-responsive-render.directive";
@@ -14,6 +15,7 @@ import {AppComponent} from './app.component';
   ],
   imports: [
     BrowserModule,
+    HighlightModule,
     NgIf,
     NgIfResponsiveRemoveDirective,
     NgIfResponsiveRenderDirective
@@ -26,6 +28,12 @@ import {AppComponent} from './app.component';
         md: 769,
         lg: 1024,
         xl: 1080
+      }
+    },
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: {
+        fullLibraryLoader: () => import('highlight.js'),
       }
     }
   ],
