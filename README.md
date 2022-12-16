@@ -1,8 +1,6 @@
 # ngIfResponsive
 
-> c
-
-
+> A simple project that provides helpers to render or remove elements from the DOM based on screen size. Its like `ngIf`, just responsive.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->

@@ -1,7 +1,6 @@
 import {ConfigService} from "./config.service";
 
 describe('ConfigService', () => {
-
   let sut: ConfigService;
 
   beforeEach(() => {
