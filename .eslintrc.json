@@ -18,6 +18,7 @@
     "@typescript-eslint/prefer-readonly": "off",
     "@typescript-eslint/consistent-indexed-object-style": "off",
     "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/member-delimiter-style": "off",
     "@typescript-eslint/object-curly-spacing": "off",
     "no-prototype-builtins": "off",
     "padded-blocks": "off"
