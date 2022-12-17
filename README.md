@@ -11,15 +11,13 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-**Table of Contents** _generated with [DocToc](https://github.com/thlorenz/doctoc)_
-
-- [NgIfResponsive - WOIP](#ngifresponsive---woip)
-  - [Installation](#installation)
-  - [Usage](#usage)
-    - [Import](#import)
-    - [Usage in HTML](#usage-in-html)
-      - [Pixel breakpoint](#pixel-breakpoint)
-      - [Configuration usage](#configuration-usage)
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Import](#import)
+  - [Usage in HTML](#usage-in-html)
+    - [Pixel breakpoint](#pixel-breakpoint)
+    - [Configuration usage](#configuration-usage)
+- [Contributors ✨](#contributors-)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
