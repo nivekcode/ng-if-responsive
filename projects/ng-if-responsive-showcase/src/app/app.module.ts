@@ -31,7 +31,7 @@ import { AppComponent } from './app.component';
     {
       provide: HIGHLIGHT_OPTIONS,
       useValue: {
-        fullLibraryLoader: () => import('highlight.js'),
+        fullLibraryLoader: async () => await import('highlight.js'),
       },
     },
   ],

@@ -1,4 +1,4 @@
-import {ConfigService} from "./config.service";
+import { ConfigService } from './config.service';
 
 describe('ConfigService', () => {
   let sut: ConfigService;
@@ -12,7 +12,6 @@ describe('ConfigService', () => {
     expect(sut.getBreakPointFromConfig(null, breakPoint)).toBe(breakPoint);
   });
 
-
   it('should return null and log an error message if we pass a key but no config', function () {
     jest.spyOn(console, 'error').mockImplementation(() => jest.fn());
     expect(sut.getBreakPointFromConfig(null, 'lg')).toBeNull();
@@ -25,9 +24,9 @@ describe('ConfigService', () => {
     const breakPoint = 'lg';
     jest.spyOn(console, 'error').mockImplementation(() => jest.fn());
 
-    expect(sut.getBreakPointFromConfig({sm: 640}, breakPoint)).toBeNull();
+    expect(sut.getBreakPointFromConfig({ sm: 640 }, breakPoint)).toBeNull();
     expect(console.error).toHaveBeenCalledWith(
-        `Couldn't find a breakpoint named ${breakPoint} in the configuration provided via the RESPONSIVE_NG_IF_CONFIG injecton token`
+      `Couldn't find a breakpoint named ${breakPoint} in the configuration provided via the RESPONSIVE_NG_IF_CONFIG injecton token`
     );
   });
 
@@ -36,7 +35,8 @@ describe('ConfigService', () => {
     const breakPointValue = 640;
     jest.spyOn(console, 'error').mockImplementation(() => jest.fn());
 
-    expect(sut.getBreakPointFromConfig({sm: breakPointValue}, breakPoint)).toBe(breakPointValue);
+    expect(
+      sut.getBreakPointFromConfig({ sm: breakPointValue }, breakPoint)
+    ).toBe(breakPointValue);
   });
-
 });
