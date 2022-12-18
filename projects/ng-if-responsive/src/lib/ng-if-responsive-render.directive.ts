@@ -7,7 +7,7 @@ import {
   TemplateRef,
   ViewContainerRef,
 } from '@angular/core';
-import { Subject, takeUntil } from 'rxjs';
+import { Subject, takeUntil, tap } from 'rxjs';
 
 import { ResponsiveService } from './responsive.service';
 import { RESPONSIVE_NG_IF_CONFIG } from './responsive-config.model';

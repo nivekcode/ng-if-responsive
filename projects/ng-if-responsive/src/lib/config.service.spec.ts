@@ -7,6 +7,8 @@ describe('ConfigService', () => {
     sut = new ConfigService();
   });
 
+  afterEach(() => jest.restoreAllMocks());
+
   it('should return a number if we pass in a number', function () {
     const breakPoint = 640;
     expect(sut.getBreakPointFromConfig(null, breakPoint)).toBe(breakPoint);

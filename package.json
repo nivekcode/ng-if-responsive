@@ -11,6 +11,7 @@
     "lint": "eslint projects/**/*.ts",
     "lint-staged": "lint-staged --allow-empty",
     "commitlint": "commitlint --edit",
+    "watch:library": "jest --config projects/ng-if-responsive/jest.config.js --watch",
     "test:library": "jest --config projects/ng-if-responsive/jest.config.js",
     "coverage:library": "jest --config projects/ng-if-responsive/jest.config.js --coverage",
     "format:test": "prettier --list-different 'projects/**/*.{ts,html}'",

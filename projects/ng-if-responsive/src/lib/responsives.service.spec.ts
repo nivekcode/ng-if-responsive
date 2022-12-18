@@ -18,6 +18,8 @@ describe('Responsive Service', () => {
     );
   });
 
+  afterEach(() => jest.restoreAllMocks());
+
   it('should return true if the screen is bigger than the breakpoint', () => {
     const breakPointWidth = 640;
     const screenWidth = 1000;

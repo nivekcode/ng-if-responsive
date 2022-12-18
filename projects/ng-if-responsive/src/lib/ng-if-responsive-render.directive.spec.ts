@@ -31,6 +31,8 @@ describe('ResponsiveRenderDirective', () => {
     );
   });
 
+  afterEach(() => jest.resetAllMocks());
+
   it('should return if the config service does not return a breakpoint', function () {
     configServiceMock.getBreakPointFromConfig = () => null;
     jest.spyOn(responsiveServiceMock, 'isScreenBiggerThanBreakpoint');
@@ -43,6 +45,7 @@ describe('ResponsiveRenderDirective', () => {
 
   it('should create an embedded view on the ViewContainer if the screen is bigger than the breakpoint', function () {
     responsiveServiceMock.isScreenBiggerThanBreakpoint = () => of(true);
+    configServiceMock.getBreakPointFromConfig = () => 640;
 
     sut.ngOnInit();
     expect(viewMock.createEmbeddedView).toHaveBeenCalledWith(templateMock);
@@ -50,6 +53,7 @@ describe('ResponsiveRenderDirective', () => {
 
   it('should remove the host from the ViewContainer if the screen is smaller than the breakpoint', function () {
     responsiveServiceMock.isScreenBiggerThanBreakpoint = () => of(false);
+    configServiceMock.getBreakPointFromConfig = () => 640;
 
     sut.ngOnInit();
     expect(viewMock.clear).toHaveBeenCalled();
