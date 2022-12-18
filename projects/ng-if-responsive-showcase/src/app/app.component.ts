@@ -27,10 +27,10 @@ export class AppComponent {
   `;
 
   numberConfigRender = `
-  <h3 *ngIfResponsiveRemove="640">Hide on screens bigger than sm</h3>
-  <h3 *ngIfResponsiveRemove="769">Hide on screens bigger than md</h3>
-  <h3 *ngIfResponsiveRemove="1024">Hide on screens bigger than lg</h3>
-  <h3 *ngIfResponsiveRemove="1280">Hide on screens bigger than xl</h3>
+  <h3 *ngIfResponsiveRender="640">Render on screens bigger than sm</h3>
+  <h3 *ngIfResponsiveRender="769">Render on screens bigger than md</h3>
+  <h3 *ngIfResponsiveRender="1024">Render on screens bigger than lg</h3>
+  <h3 *ngIfResponsiveRender="1280">Render on screens bigger than xl</h3>
   `;
 
   configRemove = `
