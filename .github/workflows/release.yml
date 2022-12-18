@@ -23,6 +23,14 @@ jobs:
         run: npm run build:library
       - name: Build Showcase
         run: npm run build:showcase
+      - name: Deploy Showcase
+        uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.2
+        with:
+          github_access_token: ${{ secrets.GH_TOKEN }}
+          build_configuration: production
+          base_href: /ng-if-responsive-showcase/
+          deploy_branch: gh-pages
+          angular_dist_build_folder: dist/ng-if-responsive-showcase
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
