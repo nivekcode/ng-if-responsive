@@ -6,7 +6,7 @@
     "start": "ng serve -o",
     "build": "npm run build:library && npm run build:showcase",
     "build:library": "ng build --project=ngIfResponsive",
-    "build:showcase": "ng build --project=ngIfResponsiveShowcase",
+    "build:showcase": "ng build --project=ngIfResponsiveShowcase --base-href ./",
     "bump-version": "rjp package.json version $VERSION",
     "lint": "eslint projects/**/*.ts",
     "lint-staged": "lint-staged --allow-empty",
