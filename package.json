@@ -72,7 +72,14 @@
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
-    ]
+    ],
+    "rules": {
+      "body-max-length": [
+        0,
+        "never",
+        100
+      ]
+    }
   },
   "lint-staged": {
     "*.{ts,js,html,css,scss,less,md,json}": "prettier --write"
