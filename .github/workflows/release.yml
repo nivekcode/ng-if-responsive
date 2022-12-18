@@ -17,6 +17,8 @@ jobs:
         run: npm run lint
       - name: Test & Coverage
         run: npm run coverage:library
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
       - name: Build Library
         run: npm run build:library
       - name: Build Showcase
