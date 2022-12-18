@@ -75,8 +75,8 @@
     ],
     "rules": {
       "body-max-line-length": [
-        0,
-        "never",
+        1,
+        "always",
         100
       ]
     }
