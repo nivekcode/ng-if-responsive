@@ -12,6 +12,7 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+- [Demo](#demo)
 - [Installation](#installation)
 - [Usage](#usage)
   - [Import](#import)
@@ -21,6 +22,10 @@
 - [Contributors ✨](#contributors-)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## Demo
+
+Checkout a running demo application at https://kreuzerk.github.io/ng-if-responsive/.
 
 ## Installation
 
