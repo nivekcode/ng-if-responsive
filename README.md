@@ -65,16 +65,16 @@ If you want to use customized breakpoint identifiers you can define them via the
 
 ```typescript
 providers: [
-    {
-      provide: RESPONSIVE_NG_IF_CONFIG,
-      useValue: {
-        sm: 640,
-        md: 769,
-        lg: 1024,
-        xl: 1080
-      }
-    }
-],
+  {
+    provide: RESPONSIVE_NG_IF_CONFIG,
+    useValue: {
+      sm: 640,
+      md: 769,
+      lg: 1024,
+      xl: 1080,
+    },
+  },
+];
 ```
 
 Based on the configuration you can then go ahead and pass one of the keys (`sm`, `md`, `lg`, `xl`) to the directive.
