@@ -32,7 +32,7 @@ Checkout a running demo application at https://kreuzerk.github.io/ng-if-responsi
 To install this project run the following command in a terminal of your choice.
 
 ```bash
-npm install ngIfResponsive
+npm install ng-if-responsive
 ```
 
 ## Usage
