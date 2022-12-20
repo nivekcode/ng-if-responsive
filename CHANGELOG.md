@@ -1,3 +1,9 @@
+## [1.0.1](https://github.com/kreuzerk/ng-if-responsive/compare/v1.0.0...v1.0.1) (2022-12-18)
+
+### Bug Fixes
+
+- 🐛 (showcase) add missing padding ([5f89d80](https://github.com/kreuzerk/ng-if-responsive/commit/5f89d8018a080b46ed5dcc5fce5471c399972385))
+
 # 1.0.0 (2022-12-18)
 
 ### Bug Fixes
